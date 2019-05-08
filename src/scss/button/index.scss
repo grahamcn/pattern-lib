@@ -1,0 +1,51 @@
+.button {
+	background-color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	font-size: 16px;
+	padding: 0 20px;
+	height: 48px;
+	overflow: hidden;
+	transition: all 0.1s linear;
+	white-space: nowrap;
+
+	&:active,
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
+
+	.icon {
+		font-size: inherit;
+		color: inherit;
+	}
+
+	.icon + span,
+	span + .icon {
+		margin-left: 8px;
+	}
+
+	&.primary {
+		color: #fff;
+		background-color: #1FA94A;
+    background-image: linear-gradient(to bottom, #1FA94A, #198D3E);
+  }
+
+  &.transparent {
+		background-color: transparent;
+	}
+
+	&.secondary {
+		color: #333;
+		background-color: rgb(255, 209, 0);
+		background-image: linear-gradient(rgb(255, 209, 0), rgb(242, 177, 9));
+	}
+
+	// error...
+}

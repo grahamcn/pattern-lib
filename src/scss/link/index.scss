@@ -1,0 +1,29 @@
+.link {
+	opacity: 0.8;
+	text-decoration: none;
+	transition: opacity 0.1s ease-in-out;
+  cursor: pointer;
+  color: inherit;
+	text-decoration: underline;
+	display: inline-block;
+
+	&.selected,
+	&:hover {
+		opacity: 1;
+	}
+
+	.icon {
+		font-size: inherit;
+		color: inherit;
+	}
+
+	.icon + span,
+	span + .icon {
+		margin-left: 8px;
+	}
+
+	&.imageLink {
+		opacity: 1;
+		line-height: 1;
+	}
+}

@@ -1,0 +1,74 @@
+/* font size/line height mixins */
+@mixin smallText() {
+  font-size: 14px;
+  line-height: 1.7143; // 24px;
+}
+
+@mixin baseText() {
+  font-size: 16px;
+  line-height: 1.5; // 24px;
+}
+
+@mixin largeText() {
+  font-size: 18px;
+  line-height: 1.33; // 24px;
+}
+
+@mixin xLargeText() {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+@mixin xxLargeText() {
+  font-size: 22px;
+  line-height: 1.0909;
+}
+
+@mixin xxxLargeText() {
+  font-size: 24px;
+  line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+  margin: 0;
+}
+
+h1 {
+  @include xxxLargeText();
+}
+
+h2 {
+  @include xxLargeText();
+}
+
+h2 {
+  @include xLargeText();
+}
+
+h4 {
+  @include largeText();
+}
+
+h5 {
+  @include baseText();
+}
+
+h6 {
+  @include smallText();
+}
+
+.header {
+  margin-bottom: 12px;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  @include baseText();
+  font-family: sans-serif;
+  font-weight: 400;
+}
+

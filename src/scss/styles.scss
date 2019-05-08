@@ -1,0 +1,38 @@
+/* theme */
+@import './theme/index';
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+	min-height: 100%;
+}
+
+body {
+  color: $font-color;
+	background: $background-color;
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+  padding: 0;
+}
+
+/* common mixins */
+@import './mixins/constrainWidth';
+
+/* base / elements */
+@import './typography/index';
+@import './link/index';
+@import './button/index';
+@import './list/index';
+@import './overlay/index';
+
+/* generic app */
+@import '../app/styles';
+
+
