@@ -2,20 +2,17 @@ import xs, { Stream } from 'xstream'
 import { div, VNode, h1 } from '@cycle/dom'
 
 interface Sinks {
-  DOM: Stream<VNode>,
+  DOM: Stream<VNode>
 }
 
-interface Sources {
-}
+interface Sources {}
 
 function App(sources: Sources): Sinks {
-  const vdom$ = xs.of(div('.app', [
-    h1('Pattern Library')
-  ]))
+  const vdom$ = xs.of(div('.app', [h1('Pattern Library')]))
 
-	return {
+  return {
     DOM: vdom$,
-	}
+  }
 }
 
 export default App

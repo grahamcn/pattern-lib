@@ -4,6 +4,7 @@ const webpack = require("webpack")
 const webpackMerge = require('webpack-merge')
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env)
 const applyPresets = require('./build-utils/applyPresets')
+const BuildMenuPlugin = require('./build-utils/plugins/BuildMenu')
 
 const paths = {
   DIST: path.resolve(__dirname, '.dist'),
@@ -26,6 +27,7 @@ module.exports = ({mode = "production", presets = []}) => {
 				publicPath: '/',
       },
       plugins: [
+        new BuildMenuPlugin(),
         new HtmlWebpackPlugin({
 					template: path.join(paths.SRC, 'index.html'),
 				}),
